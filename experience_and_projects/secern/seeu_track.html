@@ -88,18 +88,74 @@
 
 				<div class="container">
 					<div class="row">
-						<img src="../../images/noise_classification_image.jpg" alt="" width="450" height="300" />
+						<img src="../../images/seeutrack/seeutrack_5.png" alt="" width="550" height="400" />
 						<article class="col-6">
 							<header>
-								<h3>1. Classification of Noised Image</h3>
+								<h3>SeeU Track</h3>
 							</header>
-							<p> Develop a model from scratch which can classify the noised mnist dataset with high accuracy.
-								The dataset is noised and given by instructor.
-							</p>
-							<p> To make a model to have a good performance, image augmentations (flipping, rotation, etc.)
-								are applied to the training dataset.
+							<p> In this porject, We develop AI model for AI CCTV system which is called
+								SeeU track. For this project, the system is mainly focus on the re-identification 
+								task for vehicle and person. For Vehicle re-identification,
+								we employed object detection model for detecting vehicle and its license plate, classification model
+								to recognize the vehicle's brand, model, and color, and text detection and text
+								recognition model (OCR) to read the license plate. Besides, for person re-identification, we applied
+								object detection model to detect person and person attribute recognition model to
+								recognize the person's attribute in terms of gender, age, type and color of cloth, etc.
 							</p>
 						</article>
+						<img src="../../images/object_detection_image.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>1. Person, Vehicle, License plate detection with Object Detection Model </h3>
+							</header>
+							<p>We exploit Object Detection model to detect person, vehicle, and its license plate to detect
+								the target accurately. To select the most decent model in the desired environment, 
+								we searched and tested the open source model, and decide to use YOLOv11 model.
+							</p>
+						</article>
+						<img src="../../images/classification_image.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>2. Vehicle recognition with Object Classification Model </h3>
+							</header>
+							<p>We use Object Classification model to extract the MMC (maker, model, color) Information
+								of the vehicle. For this task, many open source models are tested and YOLOv11 model
+								is chosen since it has a higher accuracy than others.
+							</p>
+						</article>
+						<img src="../../images/ocr_image.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>3. License Plate Recognition</h3>
+							</header>
+							<p>
+								OCR model is used for this task. OCR model is consist of text detection and recognition.
+								We tested and evaluated models and dbnet and svtr models are chosen. 
+							</p>
+						</article>
+						<img src="../../images/seeutrack/seeutrack_6.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>4. Person Attribute Recognition</h3>
+							</header>
+							<p>
+								Person Attribute Recongition is the task to extract the information of the
+								person including gender, age, type and color of cloth, accessory, etc. To develop
+								the model, we tried different architectures to extract the feature information such as
+								Resnet, vision transformers (ex. swin transformer), and etc. After many test, we
+								decide to employ vision language model for extraction and transformer
+								for classification task.
+							</p>
+						</article>
+						<img src="../../images/seeutrack/seeutrack_1.png" alt="" width="600" height="350" />
+						<img src="../../images/seeutrack/seeutrack_2.png" alt="" width="600" height="350" />
+						<img src="../../images/seeutrack/seeutrack_3.png" alt="" width="600" height="350" />
+						<img src="../../images/seeutrack/seeutrack_4.png" alt="" width="600" height="350" />
+
+						<p>(PS) During the model development, we tested many scheme such as changing the architecutre,
+							modifing number of layers, activation function, loss function, and etc to 
+							improve the performance.
+						</p>
 					</div>
 				</div>
 			</div>

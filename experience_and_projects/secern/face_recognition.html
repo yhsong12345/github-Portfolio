@@ -88,18 +88,52 @@
 
 				<div class="container">
 					<div class="row">
-						<img src="../../images/noise_classification_image.jpg" alt="" width="450" height="300" />
+						<img src="../../images/face_recognition_image.png" alt="" width="550" height="350" />
 						<article class="col-6">
 							<header>
-								<h3>1. Classification of Noised Image</h3>
+								<h3>Face Recognition System</h3>
 							</header>
-							<p> Develop a model from scratch which can classify the noised mnist dataset with high accuracy.
-								The dataset is noised and given by instructor.
-							</p>
-							<p> To make a model to have a good performance, image augmentations (flipping, rotation, etc.)
-								are applied to the training dataset.
+							<p>In this project, we develop AI model to detect and recognize the face for
+								ID verification purpose. The system is composed with face and its landmark detection 
+								model and face recognition model. 
 							</p>
 						</article>
+						<img src="../../images/face/face_1.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>1. Face and its landmark detection with Pose Estimation Model</h3>
+							</header>
+							<p>We exploit Object Detection and Pose Estimation model to detect face and
+								its landamrk including eye, nose, and mouth for the purpose of higher accuracy.
+								Among many models, we decide to employ pose estimation model from YOLOv11 since
+								it runs with face detection and pose estimation simultaneously.
+							</p>
+						</article>
+						<img src="../../images/face/face_2.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>2. Face Alignment</h3>
+							</header>
+							<p>To increase and ease of face recognition, we applied image alignment for face image from
+								face detection model.
+							</p>
+						</article>
+						<img src="../../images/face/face_3.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>3. Face Recognition</h3>
+							</header>
+							<p>We developed and tested many different feature extraction model for backbone and 
+								classification layer for the head of the architecture. Moreover, we employed
+								different loss function. Finally, we build the model with LResnet for backbone,
+								linear layer for head, and subcenter arcface for loss function.
+							</p>
+						</article>
+
+						<p>(PS) During the model development, we tested many scheme such as changing the architecutre,
+							modifing number of layers, activation function, loss function, and etc to 
+							improve the performance.
+						</p>
 					</div>
 				</div>
 			</div>

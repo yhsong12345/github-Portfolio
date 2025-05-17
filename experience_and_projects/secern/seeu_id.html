@@ -88,18 +88,60 @@
 
 				<div class="container">
 					<div class="row">
-						<img src="../../images/noise_classification_image.jpg" alt="" width="450" height="300" />
+						<img src="../../images/seeuid/seeuid_5.jpg" alt="" width="550" height="300" />
 						<article class="col-6">
 							<header>
-								<h3>1. Classification of Noised Image</h3>
+								<h3>SeeU ID</h3>
 							</header>
-							<p> Develop a model from scratch which can classify the noised mnist dataset with high accuracy.
-								The dataset is noised and given by instructor.
-							</p>
-							<p> To make a model to have a good performance, image augmentations (flipping, rotation, etc.)
-								are applied to the training dataset.
+							<p> 
+								In this project, we develop ID card detection and recognition system which is called
+								SeeU ID. SeeU ID is consist of OCR, image detection, face detection, and face recognition.
+								The purpose of the task is to read the information from ID and verify the
+								authority or accessibility for security.
 							</p>
 						</article>
+						<img src="../../images/seeuid/seeuid_6.jpg" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>1. ID card detection with segmentation</h3>
+							</header>
+							<p>
+								To read the information, ID card must be detected. And ID card could not be laid
+								in proper position. Therefore, we decide to detect ID card with segmentation model
+								and after many review, we choose YOLOv11 segmentation model for this task.
+							</p>
+						</article>
+						<img src="../../images/seeuid/seeuid_7.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>2. Alignment of ID card</h3>
+							</header>
+							<p>
+								To increase and ease of detecting and recognizing texts, we applied image alignment 
+								for image of ID card from segmentation model.
+							</p>
+						</article>
+						<img src="../../images/seeuid/seeuid_4.png" alt="" width="550" height="300" />
+						<article class="col-6">
+							<header>
+								<h3>3. OCR</h3>
+							</header>
+							<p>
+								OCR model is used for this task. OCR model is consist of text detection and recognition.
+								We tested and evaluated models and dbnet and svtr models are chosen. 
+							</p>
+						</article>
+						<img src="../../images/seeuid/seeuid_1.jpg" alt="" width="450" height="600" />
+						<article class="col-6">
+							<img src="../../images/seeuid/seeuid_2.png" alt="" width="750" height="300" />
+							<img src="../../images/seeuid/seeuid_3.png" alt="" width="750" height="300" />
+						</article>
+
+
+						<p>(PS) During the model development, we tested many scheme such as changing the architecutre,
+							modifing number of layers, activation function, loss function, and etc to 
+							improve the performance.
+						</p>
 					</div>
 				</div>
 			</div>
