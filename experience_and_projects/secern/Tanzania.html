@@ -34,7 +34,7 @@
 									<a href="../../Experience_and_Projects.html">Experience & Projects</a>
 									<ul>
 										<li>
-											<a href="../../experience_and_projects/Project_cubox.html">SECERN AI (formerly CUBOX)</a>
+											<a href="../../experience_and_projects/Project_cubox.html">SECERN AI (formerly CUBOX) &hellip;</a>
 											<ul>
 												<li><a href="../../experience_and_projects/secern/seeu_track.html">Seeu Track</a></li>
 												<li><a href="../../experience_and_projects/secern/face_recognition.html">Face Recognition System</a></li>
@@ -58,13 +58,7 @@
 											</ul>
 										</li>
 										<li>
-											<a href="../../experience_and_projects/Project_isu.html">ISU (Bachelor's Degree) &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
+											<a href="../../experience_and_projects/Project_isu.html">ISU (Bachelor's Degree)</a>
 										</li>
 									</ul>
 								</li>
@@ -88,7 +82,7 @@
 
 				<div class="container">
 					<div class="row">
-						<img src="../../images/tanzania/tanzania_2.png" alt="" width="450" height="500" />
+						<img src="../../images/tanzania/tanzania_5.jpg" alt="" width="450" height="400" />
 						<article class="col-6">
 							<header>
 								<h3>Tanzania SmartGate</h3>
@@ -96,10 +90,49 @@
 							<p> 
 								In this project, autonomatic gate pass system which is called smartgate 
 								is developed with AI model. The system is consist of Object Detection
-								Model and OCR. For Object Detection, 
+								Model, OCR and face recognition. For Object Detection, It would detect license plate and
+								Container number area, and OCR would detect and recognize
+								the results from detection. And the face recognition system is consist of face detection
+								and face recognition. Face detection is to detect and crop the face. With this result,
+								face recognition would compare the result to one of the list registered in the 
+								database. After comparing and verifying the identity, vehilce number, 
+								and container number, the gate would automaticaly open and the record will be stored
+								in the database.
 							</p>
 						</article>
-
+						<img src="../../images/tanzania/tanzania_2.png" alt="" width="450" height="400" />
+						<article class="col-6">
+							<header>
+								<h3>1. LPR (License Plate Recognition) & CNR (Container Number Recongition)</h3>
+							</header>
+							<p> 
+								To accomplish this task, the object detection model is used to detect
+								the license plate and container number region to make OCR model
+								can read the text easily with high accuracy. For this, we test and 
+								decide to employ YOLOv11 model since it has higher speed and accuracy.
+								Likewise, we test many different model and its combination
+								related to the OCR and decide to use dbnet and svtr model.
+							</p>
+						</article>
+						<img src="../../images/tanzania/tanzania_6.png" alt="" width="450" height="400" />
+						<article class="col-6">
+							<header>
+								<h3>2. Face Recongition</h3>
+							</header>
+							<p> 
+								To build a face recognition system, face detection and recognition model
+								is needed. To select the decent model, we considered many factors such
+								as accuracy, speed, computational cost, and so on. Finally, we choose
+								to use YOLOv11 which has a better performance than others. And for 
+								face recognition, we compared many kinds of feature extraction algorithm,
+								and head algorithm to output the proper result. At the end of many trial,
+								we select ResNet101 for feature extraction and sub-center Arcface for 
+								head algorithm.
+							</p>
+						</article>
+						<img src="../../images/tanzania/tanzania_1.png" alt="" width="850" height="400" />
+						<img src="../../images/tanzania/tanzania_4.jpg" alt="" width="350" height="400" />
+						<iframe src="https://drive.google.com/file/d/1jUaOmgu0Q_cII6b1p_KZKltHiNWfvipa/preview" width="640" height="480" allow="autoplay"></iframe>
 						<p>
 							(PS) During the model development, we tested many scheme such as changing the architecutre,
 							modifing number of layers, activation function, loss function, and etc to 
